@@ -42,7 +42,7 @@ BFF (port 5000): The BFF that aggregates data from both microservices.
 python app.py
 ```
 
-2. Running the Tests
+2. **Running the Tests**
    To test the integration between the microservices and the BFF, run the following command:
 
 ```bash
