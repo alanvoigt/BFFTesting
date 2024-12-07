@@ -19,7 +19,40 @@ This project uses the following dependencies:
 - **requests**: Library to make HTTP calls between services.
 - **pytest**: Framework for testing the integration between services.
 
+## Running the Project
+
+1. **Start the Services**
+   You need to run the three services on their respective ports so that the BFF can interact with them:
+
+User Service (port 5001): Service returning user data.
+
+```bash
+python Service1.py
+```
+
+Order Service (port 5002): Service returning order data.
+
+```bash
+python Service2.py
+```
+
+BFF (port 5000): The BFF that aggregates data from both microservices.
+
+```bash
+python app.py
+```
+
+2. Running the Tests
+   To test the integration between the microservices and the BFF, run the following command:
+
+```bash
+pytest test/test_bff_integration.py -v
+```
+
+The tests will check if the BFF is correctly aggregating data from both the user and order services.
+
 To install dependencies, run:
 
 ```bash
 pip install -r requirements.txt
+```
